@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shravan op</title>
+<style>
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<script>
+function getValue(firstNumber,secondNumber){
+    x=document.getElementById("firstNumber").value;
+    y=document.getElementById("secondNumber").value; 
+}
+
+function add(){
+    getValue();
+    sum=Number(x)+Number(y);
+    document.getElementById("result").innerHTML=x+"+"+y+"="+sum;
+}
+function sub(){
+    getValue();
+    subt=Number(x)-Number(y);
+    document.getElementById("result").innerHTML=x+"-"+y+"="+subt;
+}
+function mul(){
+    getValue();
+    mult=Number(x)*Number(y);
+    document.getElementById("result").innerHTML=x+"*"+y+"="+mult;
+}
+function div(){
+    getValue();
+    divi=(Number(x))/(Number(y));
+    document.getElementById("result").innerHTML=x+"/"+y+"="+divi;
+}
+</script>
+</head>
+<body>
+<center>
+<table>
+<h1>Shravan ka calculator</h1>
+<tr>
+	<td>Enter First no.:</td>
+	<td><input type="text"id="firstNumber" required></td>
+</tr>
+<tr>
+	<td>Enter Second no.:</td>
+	<td><input type="text"id="secondNumber" required></td>
+</tr>
+</table>
+<br/>
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="mul()">Multiply</button>
+<button onclick="div()">Divide</button>
+<br>
+<label type="text">Result:</label>
+<label type="text" id="result"></label>
+</center>
+</body>
+</html>
